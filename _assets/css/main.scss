@@ -10,30 +10,32 @@
 @import 'bootstrap';
 
 $z-index-navbar: 10;
+$header-height: 80px;
 $footer-height: 60px;
 
 body {
+  margin-top: $header-height;
   margin-bottom: $footer-height;
 }
 
 .site-header {
+  background-color: $gray-200;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
-  z-index: $z-index-navbar;
 }
 
 body > .site-header + .container {
-  padding: 60px 15px 0;
+  padding: 40px 15px 0;
 }
 
 .container {
-  max-width: 720px;
+  max-width: 960px;
 }
 
 .site-footer {
-  background-color: $gray-300;
+  background-color: $gray-200;
   bottom: 0;
   height: $footer-height;
   line-height: 60px;
