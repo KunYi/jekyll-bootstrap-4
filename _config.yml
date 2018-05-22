@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-bootstrap-4" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -28,14 +28,64 @@ github_username:  jekyll
 markdown: kramdown
 theme: minima
 plugins:
+  - autoprefixer-rails
+  - bootstrap
+  - font-awesome-sass
   - jekyll-feed
+
+# --
+# Jekyll assets settings
+# --
+assets:
+  source_maps: true # false on JEKYLL_ENV=production
+  destination: "/assets"
+  compression: true
+  gzip: false
+  defaults:
+    js: { integrity: false } # true on JEKYLL_ENV=production
+    css: { integrity: false } # true on JEKYLL_ENV=production
+    img: { integrity: false } # true on JEKYLL_ENV=production
+  caching:
+    path: ".jekyll-cache/assets"
+    type: file # Possible values: memory, file
+    enabled: true
+  # --
+  # Assets you wish to always have compiled.
+  #   This can also be combined with raw_precompile which
+  #   copies assets without running through the pipeline
+  #   making them ultra fast.
+  # --
+  precompile: []
+  raw_precompile: [
+    #
+  ]
+
+  sources:
+    - assets
+    - assets/css
+    - _assets/css
+    - _assets/fonts
+    - _assets/images
+    - _assets/videos
+    - _assets/javascript
+    - _assets/video
+    - _assets/image
+    - _assets/img
+    - _assets/js
+    - _sass
+
+  plugins:
+    css: { autoprefixer: {}}
+    img: { optim: {}}
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - script
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/

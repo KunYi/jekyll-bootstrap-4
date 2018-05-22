@@ -1,0 +1,29 @@
+language: ruby
+os: linux
+rvm:
+- 2.4.1
+before_script:
+- chmod +x ./script/cibuild
+script: "./script/cibuild"
+branches:
+  only:
+  - master 
+  - gh-pages
+  - "/pages-(.*)/"
+env:
+  global:
+  - secure
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - secure: trtBs5UuwJFsue/2oQcBEUl/rQwQ5sU3HJRKiYDn8yIYoWtZLbG8CnWRwte84L4IhYCnq+9p87aVsHtZnqJZCSJZGp04pvkXi9OTKilTU/afoOKc4/1/3tPAc7NZCA2YkbxaXexHc9D00G8iRkyCly/8Uiijg3ohsvxSirNpnuJaTs1REuu+gMNMMdjktiBSq5gqg3btv9X4Qpt0xkERR12rZDFb7sbnIV4tJSQATEmdlVQDNId3Gok6jUQwwC2jvvlYUbipM0xYwpu0YyP1v/dveY0A09iBURd9zhiThiRWC5bTQ4OHiJAloLk7rxRRr+zoMgiIE9y1+fsanowI19UC84SnqUSkt0t0XLyFDUARqffOGD0UcnHG5sYfWkOt29PNiJokXFVHhUXq++iZHe175Lar75dqJ5JSdh89PUHi6wxbtpb751HuQhwgCsLXyz5hDSkj4izSO8ypg/xoJBbKHAp6+ZKQ3xGPXlhML2hTcAUUQM1hgfZ26GVvTm2RmDg8h0lokGmvLi942npYULhNssXaFmekeFqMduQhcrMAy6OZ5/aKj/b+gKt7VmLPGAUzeveKHC3aF7WFtb3mCQinMgoOrwWOzTL1Im+koqXNZjnRfnXLygFFkDUM8+wonCkq19Dy4sLVgorK9zlCYGarh8QrBJAVhoUXcW13fSk=
+sudo: false
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  keep-history: true
+  local-dir: "./_site"
+  committer-from-gh: true
+  user: "Che, KunYi(陳坤毅)"
+  email: "kunyi@uwingstech.com"
+  on:
+    branch: master
