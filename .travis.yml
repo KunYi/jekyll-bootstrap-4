@@ -7,14 +7,14 @@ before_script:
 script: "./script/cibuild"
 branches:
   only:
-  - master 
+  - master
   - gh-pages
   - "/pages-(.*)/"
 env:
   global:
   - secure
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - secure: trtBs5UuwJFsue/2oQcBEUl/rQwQ5sU3HJRKiYDn8yIYoWtZLbG8CnWRwte84L4IhYCnq+9p87aVsHtZnqJZCSJZGp04pvkXi9OTKilTU/afoOKc4/1/3tPAc7NZCA2YkbxaXexHc9D00G8iRkyCly/8Uiijg3ohsvxSirNpnuJaTs1REuu+gMNMMdjktiBSq5gqg3btv9X4Qpt0xkERR12rZDFb7sbnIV4tJSQATEmdlVQDNId3Gok6jUQwwC2jvvlYUbipM0xYwpu0YyP1v/dveY0A09iBURd9zhiThiRWC5bTQ4OHiJAloLk7rxRRr+zoMgiIE9y1+fsanowI19UC84SnqUSkt0t0XLyFDUARqffOGD0UcnHG5sYfWkOt29PNiJokXFVHhUXq++iZHe175Lar75dqJ5JSdh89PUHi6wxbtpb751HuQhwgCsLXyz5hDSkj4izSO8ypg/xoJBbKHAp6+ZKQ3xGPXlhML2hTcAUUQM1hgfZ26GVvTm2RmDg8h0lokGmvLi942npYULhNssXaFmekeFqMduQhcrMAy6OZ5/aKj/b+gKt7VmLPGAUzeveKHC3aF7WFtb3mCQinMgoOrwWOzTL1Im+koqXNZjnRfnXLygFFkDUM8+wonCkq19Dy4sLVgorK9zlCYGarh8QrBJAVhoUXcW13fSk=
+  - secure: MK8oU7KcRYe40JB0zFOTtyJpVnhphrySHEl+oKDBrx8U8YlVkeNScKs3BIqyw0SggPvaUHbtemgHWL1Ky8uKBLwldCIWFjGGdVuquC+YT8S+qnpjGP8VTXRcPxb7+QyJEO9r6DJdeGc3NOFU5WZvIzYYfpmj5lCaEJKKCwQS6z8ZTrv5Rbe7dYgLPu2ETH/W9IICvQlye3JhEgLomUVcJ94pybXMo3w0qOPGxjoE1Mp7GIXRUpg2EVGU+q0M2PRzQvDEJ9l81drJR386o+jgscJWiVIa/RLjHh0mZMcAFt4himIp6gUmKJ4kRWOmsAKHNOwHEuslFm7hEmYf9jiP/XoM4VC0Lt1Ze/jnbq9RNkfFFSPjnSKHjVVcstYMrBTDTj0izu92yLArhjXzskWTHztiB81zFo7K5hOWxnYFWptbrNvSnRO4RIe2FmeYjm0W8wn2f0Ti/uuP628QqrN//3AwmIlvlce62Q2DTK6G6027hV0xXUxYy9apiUIZ5l3ZgMSmMxBHqKQLctMiKjWeGqhfJew4340MJFHsA/StjGgZ31nd/5h4GVEyYHwKYShGOJ0Y4RujSTke0EaoU5DZ0A0hFhoa89r38Q6f3qJCj/dlJfWztLIbPqAcEz1Wct+P4qv06CmhZQos/RYjb1/+jSqU6Wyfn2SsjgbZpHBtvSY=
 sudo: false
 deploy:
   provider: pages
@@ -23,7 +23,7 @@ deploy:
   keep-history: true
   local-dir: "./_site"
   committer-from-gh: true
-  user: "Che, KunYi(陳坤毅)"
-  email: "kunyi@uwingstech.com"
+  user: Chen, KunYi(陳坤毅)
+  email: kunyi@uwingstech.com
   on:
     branch: master
