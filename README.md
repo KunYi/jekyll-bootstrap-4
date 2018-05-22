@@ -17,3 +17,5 @@ Note that GitHub Pages doesn't run gems that aren't on their predefined list, so
 # References
 * [Travis-CI encrypt 'GITHUB_TOKEN'](https://github.com/travis-ci/travis.rb#encrypt)
 * [Travis-CI Deploy](https://docs.travis-ci.com/user/deployment/pages/)
+* [Success build log](https://travis-ci.org/KunYi/jekyll-bootstrap-4/builds/382002804)
+* [Demo GitHub Pages](https://kunyi.github.io/jekyll-bootstrap-4/)
