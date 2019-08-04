@@ -20,7 +20,7 @@ gem "minima", "~> 2.0"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "autoprefixer-rails"
-  gem "bootstrap", "= 4.1.1"
+  gem "bootstrap", ">= 4.3.1"
   gem 'font-awesome-sass', '~> 5.0.13'
   gem "jekyll-assets"
   gem "jekyll-feed", "~> 0.6"
