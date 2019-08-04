@@ -39,7 +39,7 @@ plugins:
 assets:
   source_maps: true # false on JEKYLL_ENV=production
   destination: "/assets"
-  compression: true
+  compression: false
   gzip: false
   defaults:
     js: { integrity: false } # true on JEKYLL_ENV=production
